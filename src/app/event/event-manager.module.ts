@@ -12,6 +12,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MatToolbarModule } from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 
 const routes: Routes = [
   {path: '', component: EventManagerAppComponent,
@@ -29,6 +30,7 @@ const routes: Routes = [
     BrowserModule,
     MaterialModule,
     MatToolbarModule,
+    MatCardModule,
     FlexLayoutModule,
     FormsModule,
     RouterModule.forRoot(routes)

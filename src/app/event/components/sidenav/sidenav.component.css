@@ -11,12 +11,18 @@
   min-height: 100%;
 }
 
+.app-sidenav {
+  width: 240px;
+}
 
 .app-sidenav-content {
   display: flex;
   height: 100%;
   flex-direction: column;
+}
 
+.wrapper {
+  margin: 50px;
 }
 
 
