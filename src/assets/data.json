@@ -1,0 +1,31 @@
+[{
+  "id": 1,
+  "event_event_name": "Home",
+  "number_of_seats": 9
+},
+{
+  "id": 2,
+  "event_event_name": "&Uuml;ber uns",
+  "number_of_seats": 0
+},
+{
+  "id": 3,
+  "event_name": "Events",
+  "number_of_seats": 1
+},
+{
+  "id": 4,
+  "event_name": "Galerie",
+  "number_of_seats": 8
+},
+{
+  "id": 5,
+  "event_name": "Sponsoren",
+  "number_of_seats": 6
+},
+{
+  "id": 6,
+  "event_name": "Kontakt",
+  "number_of_seats": 6
+}
+]

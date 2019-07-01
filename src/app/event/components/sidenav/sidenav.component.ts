@@ -12,7 +12,9 @@ export class SidenavComponent implements OnInit {
 
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

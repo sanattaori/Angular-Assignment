@@ -13,6 +13,9 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MatToolbarModule } from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
+import { EventsService } from './services/events.service';
+import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 const routes: Routes = [
   {path: '', component: EventManagerAppComponent,
@@ -33,9 +36,13 @@ const routes: Routes = [
     MatCardModule,
     FlexLayoutModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    MatGridListModule,
   ],
-  providers: [],
+  providers: [
+    EventsService
+  ],
   bootstrap: [EventManagerAppComponent]
 })
 export class EventManagerModule { }
