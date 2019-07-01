@@ -9,13 +9,10 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="app-sidenav-content">
-    <app-toolbar (toggleSideNav)="sidenav.toggle()">
-    </app-toolbar>
-    <div class="wrapper">
-
-      <app-main-content>
+    <!-- <app-toolbar (toggleSideNav)="sidenav.toggle()">
+    </app-toolbar> -->
+      <app-main-content (toggleSideNav)="sidenav.toggle()">
       </app-main-content>
-    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

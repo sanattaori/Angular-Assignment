@@ -1,11 +1,23 @@
-<form class="search-box">
-  <input class="search-box-input" placeholder="SEARCH EVENTS" [(ngModel)]="EventFilter" [ngModelOptions]="{standalone: true}" type="text" required="required">
-  <button type="reset" class="delete"></button>
-</form>
+<!-- Toolbar -->
+
+<mat-toolbar color="primary">
+    <!-- Toggle menu button -->
+  <button mat-button class="sidenav-toggle" (click)="toggleSideNav.emit()">
+        <mat-icon>menu</mat-icon>
+    </button>
+  <span>Event Booking App</span>
+  <form class="search-box">
+    <input class="search-box-input" placeholder="SEARCH EVENTS" [(ngModel)]="EventFilter" [ngModelOptions]="{standalone: true}" type="text" required="required">
+    <button type="reset" class="delete"></button>
+  </form>
+</mat-toolbar>
+
+<!-- End Toolbar -->
+
+
 <div class="flex-container">
 
-
-  <div class="flex-item" *ngFor="let event of events">
+  <div class="flex-item" *ngFor="let event of events | filter : EventFilter">
     <mat-card class="event-card">
       <mat-card-header>
         <mat-card-title>{{event.event_name}}</mat-card-title>
@@ -18,7 +30,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button [routerLink]="['/event-booking',event.id]" routerLinkActive="router-link-active" >{{event.number_of_seats?'Book Now':'Sold Out'}}</button>
+        <button mat-button [routerLink]="['event-booking',event.id]"  >{{event.number_of_seats?'Book Now':'Sold Out'}}</button>
       </mat-card-actions>
     </mat-card>
   </div>
