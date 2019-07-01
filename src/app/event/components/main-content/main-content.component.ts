@@ -8,13 +8,20 @@ import SampleJson from '../../../../assets/data.json';
   templateUrl: './main-content.component.html',
   styleUrls: ['./main-content.component.css']
 })
+
 export class MainContentComponent implements OnInit {
+  events:any;
 
   constructor() {
     console.log(SampleJson);
   }
 
   ngOnInit() {
+    this.getEvents();
+  }
+
+  getEvents() {
+    this.events = SampleJson;
   }
 
 }

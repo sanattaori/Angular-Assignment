@@ -4,5 +4,8 @@
         <mat-icon>menu</mat-icon>
     </button>
   <span>Event Booking App</span>
-
+  <form class="search-box">
+    <input class="search-box-input" placeholder="SEARCH EVENTS" [(ngModel)]="EventFilter" [ngModelOptions]="{standalone: true}" type="text" required="required">
+    <button type="reset" class="delete"></button>
+  </form>
 </mat-toolbar>

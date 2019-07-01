@@ -16,17 +16,21 @@ import {MatCardModule} from '@angular/material/card';
 import { EventsService } from './services/events.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { EventBookingComponent } from './event-booking.component';
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 const routes: Routes = [
   {path: '', component: EventManagerAppComponent,
   children: [
     {path: '', component: MainContentComponent}
   ] },
+  {path: 'event-booking/:id', component: EventBookingComponent},
   {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
-  declarations: [EventManagerAppComponent, ToolbarComponent, MainContentComponent, SidenavComponent],
+  declarations: [EventManagerAppComponent, ToolbarComponent, MainContentComponent, SidenavComponent, EventBookingComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -39,6 +43,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     MatGridListModule,
+    Ng2SearchPipeModule,
   ],
   providers: [
     EventsService
